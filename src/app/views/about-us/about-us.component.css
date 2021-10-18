@@ -1,0 +1,295 @@
+#contenedor {
+    align-items: center;
+    text-align: center;
+}
+
+
+.info-block { background-color: rgb(170, 170, 191); }
+.info-block-dark { background-color: rgb(145, 145, 175); }
+
+
+
+
+.column {
+    float: left;
+}
+
+@media only screen and (max-width: 1000px) {
+    .left, .right {
+        width: 10%;
+    }
+
+    .middle {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .left, .right {
+        width: 22.5%;
+    }
+
+    .middle {
+        width: 55%;
+    }
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+.info-header {
+    font-size: larger;
+}
+
+
+.Toy { color: rgb(227, 255, 42); }
+.Serious { color: rgb(31, 31, 158); }
+
+
+
+
+/* {box-sizing:border-box} */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  text-align: left;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* FOR THE SECOND SLIDERHOW ----------------------------------------------------------------------------- */
+/* {box-sizing:border-box} */
+/* Slideshow container */
+.slideshow-containerB {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  text-align: left;
+}
+
+/* Hide the images by default */
+.mySlidesB {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prevB, .nextB {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.nextB {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevB:hover, .nextB:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.textB {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dotB {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeB, .dotB:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fadeB {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+.underline {
+  text-decoration: underline;
+}
+
+
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #dbe4b5;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    float: center;
+    border: none;
+    width: 50%;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.6s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: rgb(101, 153, 202);
+  }
+  
+  /* Create an active/current tablink class */
+  .active{ background-color: rgb(113, 129, 153); }
+  
+  /* Style the tab content */
+  .tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    display: none;
+    padding: 12px 24px;
+    border: 1px solid rgb(92, 150, 160);
+    border-top: none;
+  }
+
+  /* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+.table-margin {
+  margin: auto;
+}
+
+.cell-header {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  border: 1px solid rgb(222, 222, 222);
+  background-color: rgb(90, 111, 90);
+  color: rgb(222,222,222);
+}
+
+.cell-row {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  border: 1px solid rgb(66, 66, 66);
+  background-color: rgb(194, 208, 228);
+}

@@ -1,0 +1,48 @@
+<div id="contenedor" class="form row">
+    
+    <div class="column left"><p></p></div>
+    <form (ngSubmit)="submit()" #userForm="ngForm" class="column middle">
+        <br><br>
+        <div class="form-group" class="greenish-back">
+            <br>
+            <a>Escriba las credenciales de su cuenta <strong class="Toy">Toy</strong><strong class="Serious">Serious</strong></a>
+            <br>
+            <a>(Si no se detecta su cuenta, podrá elegir crearla)</a>
+            <br><br><br><br>
+            <label for="user">Nombre de usuario <strong class="Toy">Toy</strong><strong class="Serious">Serious</strong>:</label>
+            <br>
+            <input type="text" [(ngModel)]="user.name" name="name" #name="ngModel" required>
+            <br>
+            <br>
+        
+            <div *ngIf="name.invalid && name.dirty" class="alert">
+                <div *ngIf="name.errors?.required" class="Error greenish-back">*Campo requerido</div>
+                <br>
+                </div> </div>
+                <br>
+
+                <div class="form-group greenish-back-dark">
+                    <br>
+                    <label for="password">Introduzca ahora su contraseña:</label>
+                    <br>
+                    <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required minlength="8">
+                    <div *ngIf="password.invalid && password.dirty" class="alert">
+                        <div *ngIf="password .errors?.required"><strong class="Error">*Campo requerido</strong></div>
+                        <div *ngIf="password .errors?.minlength"><strong class="Error">*Mínimo 8 caracteres</strong></div>
+                    </div>
+                    <br>
+                    <a href="">¿Has olvidado la contraseña?</a>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="greenish-back-darker">
+                    <br>
+                    <button type="submit" [disabled]="!userForm .form.valid">Acceder</button>
+                    <br>
+                    <br>
+                </div>
+
+    </form>
+    <div class="column right"><p></p></div>
+</div>

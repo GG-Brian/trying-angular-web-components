@@ -1,0 +1,53 @@
+#contenedor {
+    align-items: center;
+    text-align: center;
+}
+
+.greenish-back { background-color: rgb(79, 184, 126); }
+.greenish-back-dark { background-color: rgb(72, 153, 108); }
+.greenish-back-darker { background-color: rgb(54, 126, 86); }
+
+.Error { color:rgb(170, 26, 26) }
+
+
+.column {
+    float: left;
+}
+
+@media only screen and (max-width: 1150px) {
+    .left, .right {
+        width: 20%;
+    }
+
+    .middle {
+        width: 60%;
+    }
+}
+
+
+
+@media only screen and (min-width: 1150px) {
+    .left, .right {
+        width: 30%;
+    }
+
+    .middle {
+        width: 40%;
+    }
+}
+
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.Toy {
+    color: rgb(227, 255, 42);
+}
+
+.Serious {
+    color: rgb(31, 31, 158);
+}

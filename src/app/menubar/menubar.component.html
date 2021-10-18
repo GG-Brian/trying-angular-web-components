@@ -1,0 +1,17 @@
+<ul id="menu">
+    <li><span><img src="../../assets/img/logo.PNG" width="109px"></span></li>
+
+    <li routerLink="/catalog"><span> Catálogo </span></li>
+    <li routerLink="/us"><span> Sobre nosotros </span></li>
+    <li routerLink="/contact"><span> Contactar </span></li>
+
+
+    <li *ngIf="miToken != 0" routerLink="/pretending-this-works"><strong>Mi cuenta y productos</strong></li>
+
+    <li id="acceso" *ngIf="miToken == 0" class="acceso" routerLink="/login"><span>Registrarse</span></li>
+    <li id="acceso" *ngIf="miToken != 0" class="acceso" (click)="logout()">
+        <span><strong>Registrado como: </strong>{{ userName }}</span>
+        <img src="./../../assets/img/logout.png" width="25" height="25">
+    </li>
+
+</ul>

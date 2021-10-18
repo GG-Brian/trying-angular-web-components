@@ -1,0 +1,44 @@
+<div class="container">
+
+    <br>
+    <label for="search-bar">
+        <h1><i> Buscar productos por nombre..; </i></h1>
+    </label>
+    <form class="example-form">
+        <span matPrefix> </span>
+        <input type="tel" matInput placeholder="Nombre de producto" name="search-bar">
+        <button matSuffix mat-button>Buscar</button>
+        <br /><br><br>
+
+        <h1>Filtrar resultados por..; </h1>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="filterSection(event, 'popularity')"><strong>Al principio</strong></button>
+            <button class="tablinks" onclick="filterSection(event, 'cost')"><strong>En la actualidad</strong></button>
+            <button class="tablinks" onclick="filterSection(event, 'product-type')"><strong>En la
+                    actualidad</strong></button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="popularity" class="tabcontent">
+            <h1>Filter popularity</h1>
+            <br>
+        </div>
+        <div id="cost" class="tabcontent">
+            <h1>Filter cost</h1>
+            <br>
+        </div>
+
+        <div id="product-type" class="tabcontent">
+            <h1>Filter product-type</h1>
+            <br>
+        </div>
+
+        <div class="row">
+            <div class="column left"></div>
+            <div class="column middle"></div>
+            <div class="column right"></div>
+        </div>
+
+    </form>
+</div>

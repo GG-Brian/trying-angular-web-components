@@ -1,0 +1,99 @@
+<br>
+<div id="contenedor">
+    <h1 class="underline"><span class="Toy">Toy</span><span class="Serious">Serious</span>, siempre a por la felicidad
+    </h1>
+    <h3>Contáctenos a través de nuestro número de teléfono, una de nuestras redes sociales o bien completando el
+        formulario;</h3>
+    <div class="row">
+        <div class="column left">
+            <table class="table-margin">
+                <tr class="cell-row">
+                    <td> <img src="../../../assets/img/contact/phone-icon.png" alt="phone-icon" width="100px"></td>
+                    <td>
+                        +34 999 999 999 999 999
+                        <br><span class="underline">Horas activas; 16:00 - 22:00</span>
+                    </td>
+                    <td> <img src="../../../assets/img/contact/phone-icon.png" alt="phone-icon" width="100px"></td>
+                </tr>
+                <tr class="cell-row">
+                    <td> <img
+                            src="../../../assets/img/contact/logo-3491390_1920-1-Google-Image-Mudassar-Iqbal-Pixabay..png"
+                            alt="twitter-icon" width="100px"></td>
+                    <td> <a href="twitter.com">ToySeriousEnterpriseTwitter</a></td>
+                    <td> <img
+                            src="../../../assets/img/contact/logo-3491390_1920-1-Google-Image-Mudassar-Iqbal-Pixabay..png"
+                            alt="twitter-icon" width="100px"></td>
+                </tr>
+                <tr class="cell-row">
+                    <td> <img src="../../../assets/img/contact/icons-842893_960_720.png" alt="facebook-icon"
+                            width="100px"></td>
+                    <td> <a href="twitter.com">ToySeriousEnterpriseFacebook</a></td>
+                    <td> <img src="../../../assets/img/contact/icons-842893_960_720.png" alt="facebook-icon"
+                            width="100px"></td>
+                </tr>
+                <tr class="cell-row">
+                    <td> <img src="../../../assets/img/contact/icon-1562136_960_720.png" alt="instagram-icon"
+                            width="100px"></td>
+                    <td> <a href="twitter.com">ToySeriousEnterpriseFacebook</a></td>
+                    <td> <img src="../../../assets/img/contact/icon-1562136_960_720.png" alt="instagram-icon"
+                            width="100px"></td>
+                </tr>
+            </table>
+        </div>
+        <form (ngSubmit)="submit()" #reportForm="ngForm" class="column right">
+            <div class="form-group" class="soft-blue-back">
+                <br>
+                <a> Introduzca los datos pedidos y nos pondremos en contacto con usted tras investigar el problema </a>
+                <br><br><br>
+                <label for="realName"> Empecemos con su nombre real; </label>
+                <br>
+                <input type="text" [(ngModel)]="report.realName" name="realName" #realName="ngModel" required>
+                <br>
+                <div *ngIf="realName.invalid && realName.dirty" class="alert">
+                    <div *ngIf="realName.errors?.required"><strong class="Error">*Campo requerido</strong></div>
+                </div>
+                <br>
+            </div>
+            <br>
+
+            <div class="form-group soft-blue-back-dark">
+                <br>
+                <label for="email"> Ahora su correo electrónico; </label>
+                <br>
+                <input type="password" [(ngModel)]="report.email" name="email" #email="ngModel" required minlength="5"
+                    let>
+                <br>
+                <div *ngIf="email.invalid && email.dirty" class="alert">
+                    <div *ngIf="email .errors?.required"><strong class="Error">*Campo requerido</strong></div>
+                    <div *ngIf="email .errors?.minlength"><strong class="Error">*Mínimo 5 caracteres</strong></div>
+                </div>
+                <br>
+            </div>
+            <br>
+
+            <div class="soft-blue-back-darker">
+                <br>
+                <label for="description"> Explíquenos el problema con todo lujo de detalles; </label>
+                <br>
+                <input type="text" [(ngModel)]="report.description" name="description" #description="ngModel" required
+                    minlength="40" let>
+                <br>
+                <div *ngIf="description.invalid && description.dirty" class="alert">
+                    <div *ngIf="description .errors?.required"><strong class="Error">*Campo requerido</strong>
+                    </div>
+                    <div *ngIf="description .errors?.minlength"><strong class="Error">*Mínimo 40
+                            caracteres</strong></div>
+                </div>
+                <br>
+            </div>
+
+            <br>
+            <div class="soft-blue-back-darker-dark">
+                <br>
+                <button type="submit" [disabled]="!reportForm .form.valid">Enviar</button>
+                <br>
+                <br>
+            </div>
+        </form>
+    </div>
+</div>

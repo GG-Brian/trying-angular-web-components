@@ -1,0 +1,54 @@
+#contenedor {
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+.underline { text-decoration: underline; }
+.Toy { color: rgb(227, 255, 42); }
+.Serious { color: rgb(31, 31, 158); }
+.Error { color:rgb(170, 26, 26) }
+
+.soft-blue-back{ background-color: rgb(168, 168, 221);}
+.soft-blue-back-dark{ background-color: rgb(150, 150, 218);}
+.soft-blue-back-darker{ background-color: rgb(135, 135, 189);}
+.soft-blue-back-darker-dark{ background-color: rgb(125, 125, 172);}
+
+.column {
+    float: left;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 900px) {
+    .left { width: 47%;}
+    .right { width: 40%; }
+}
+
+@media only screen and (max-width: 900px) {
+    .left { width: 100%; }
+    .right { width: 90%; padding-left: 5%;}
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.table-margin { margin: auto; }
+
+.cell-row {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+    border: 1px solid rgb(66, 66, 66);
+    background-color: rgb(171, 185, 204);
+}
